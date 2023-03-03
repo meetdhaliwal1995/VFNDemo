@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_0a2361">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:background="@drawable/rounded_rectangle"
+        android:backgroundTint="@color/color_0C3065"
+        android:orientation="horizontal"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/fragment_container"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:translationZ="@dimen/dp_12"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <View-->
+    <!--        android:id="@+id/view_divider"-->
+    <!--        android:layout_width="@dimen/dp_0"-->
+    <!--        android:layout_height="@dimen/dp_1"-->
+    <!--        android:background="@color/color_E9E9EE"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/viewCoin" />-->
+
+    <!--    <View-->
+    <!--        android:id="@+id/viewCoin"-->
+    <!--        android:layout_width="@dimen/dp_0"-->
+    <!--        android:layout_height="@dimen/dp_0"-->
+    <!--        android:background="@color/color_ffffff"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/mbInvest" />-->
+
+    <!--    <androidx.legacy.widget.Space-->
+    <!--        android:id="@+id/spaceCoin"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="@dimen/dp_16"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/mbBuy"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        tools:ignore="MissingClass" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/mbInvest"-->
+    <!--        style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="@dimen/dp_100"-->
+    <!--        android:layout_marginBottom="@dimen/dp_16"-->
+    <!--        android:insetTop="@dimen/dp_0"-->
+    <!--        android:insetBottom="@dimen/dp_0"-->
+    <!--        android:text="@string/investments"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:cornerRadius="@dimen/dp_8"-->
+    <!--        android:textColor="@color/color_1554F0"-->
+    <!--        android:layout_marginStart="@dimen/dp_16"-->
+    <!--        app:strokeWidth="@dimen/dp_1"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/mbBuy"-->
+    <!--        app:layout_constraintHorizontal_chainStyle="packed"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:strokeColor="@color/color_1554F0"-->
+    <!--        tools:visibility="visible" />-->
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView-->
+    <!--        android:id="@+id/mbBuy"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="@dimen/dp_42"-->
+    <!--        android:insetTop="@dimen/dp_0"-->
+    <!--        android:insetBottom="@dimen/dp_0"-->
+    <!--        android:text="@string/buy"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:backgroundTint="@color/color_1554F0"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        app:cornerRadius="@dimen/dp_8"-->
+    <!--        android:visibility="visible"-->
+    <!--        android:layout_marginStart="@dimen/dp_16"-->
+    <!--        android:layout_marginEnd="@dimen/dp_16"-->
+    <!--        android:layout_marginBottom="@dimen/dp_16"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/viewCoin"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/mbInvest"-->
+    <!--        tools:visibility="visible" />-->
+
+    <!--    <androidx.constraintlayout.widget.Group-->
+    <!--        android:id="@+id/group_investment_buttons"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:constraint_referenced_ids="mbInvest, mbBuy, viewCoin, view_divider"-->
+    <!--        tools:visibility="visible"/>-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

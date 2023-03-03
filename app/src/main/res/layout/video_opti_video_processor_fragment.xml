@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~ * Created by Optisol on Aug 2019.
+  ~ * Copyright © 2019 Optisol Business Solutions pvt ltd. All rights reserved.
+  ~ * */
+  -->
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <include
+                android:id="@+id/exoPlayer"
+                layout="@layout/opti_layout_custom_exo_player"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:layout_marginTop="?android:attr/actionBarSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+<!--        <TextView-->
+<!--                android:id="@+id/tvInfo"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/select_a_video"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:fontFamily="@font/roboto_black"-->
+<!--                android:textSize="@dimen/_20sdp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintVertical_bias="0.3"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"/>-->
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/rvVideoOptions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exoPlayer">
+
+<!--            <ProgressBar-->
+<!--                    android:id="@+id/progressBar"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:indeterminate="false"-->
+<!--                    android:max="100"-->
+<!--                    android:indeterminateTintMode="src_in"-->
+<!--                    android:progressBackgroundTint="@color/light_blue"-->
+<!--                    android:indeterminateTint="@color/blue"-->
+<!--                    android:layout_marginTop="@dimen/_25sdp"-->
+<!--                    style="?android:attr/progressBarStyleHorizontal"/>-->
+
+            <TextView
+                    android:id="@+id/tvVideoProcessing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:visibility="invisible"
+                    android:text="Procewssing Video"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVideoOptions"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_160sdp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"
+                app:layout_constraintGuide_percent="0.9"
+                android:orientation="horizontal"/>
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sticker_1"
+                android:background="@color/color_000000"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/guideline"
+                app:layout_constraintEnd_toStartOf="@+id/ibCamera"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/ibGallery"
+                android:contentDescription="@string/app_name"/>
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sticker_1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/color_000000"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/guideline"
+                app:layout_constraintStart_toEndOf="@+id/ibGallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/ibCamera"
+                android:contentDescription="@string/app_name"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
